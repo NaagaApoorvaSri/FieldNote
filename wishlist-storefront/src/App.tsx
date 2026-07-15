@@ -7,7 +7,7 @@ import { WishlistPage } from "./pages/WishlistPage";
 export default function App() {
   return (
     <WishlistProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/FieldNote/">
         <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(53,80,122,0.14),_transparent_30%),linear-gradient(135deg,_#f8f5ee_0%,_#faf9f6_50%,_#f3efe8_100%)] text-ink">
           <Header />
           <main className="pb-16">
