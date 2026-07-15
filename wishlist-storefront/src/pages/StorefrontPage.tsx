@@ -10,18 +10,18 @@ export function StorefrontPage() {
   const filtered = useMemo(() => searchProducts(query), [query]);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-      <section className="mb-8 overflow-hidden rounded-[28px] border border-line/70 bg-white/80 p-6 shadow-[0_30px_80px_-35px_rgba(37,58,92,0.35)] backdrop-blur sm:p-8 lg:p-10">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="mb-12 overflow-hidden rounded-[32px] border border-line bg-gradient-to-br from-white via-white to-indigo-light/30 p-8 shadow-[0_12px_48px_-12px_rgba(59,91,219,0.2)] sm:p-10 lg:p-12 backdrop-blur-sm">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="inline-flex rounded-full border border-indigo/20 bg-indigo/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-indigo">
-              Everyday carry, refined
+            <p className="inline-flex rounded-full border border-indigo/20 bg-indigo/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo">
+              ✨ Everyday carry, refined
             </p>
-            <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+            <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
               Storefront
             </h1>
-            <p className="mt-2 text-sm leading-6 text-slate sm:text-base">
-              {products.length} everyday-carry goods, made to be used and kept.
+            <p className="mt-3 text-base leading-7 text-slate sm:text-lg">
+              {products.length} premium everyday-carry goods, handpicked and made to last. Build your perfect collection.
             </p>
           </div>
           <SearchBar value={query} onChange={setQuery} resultCount={filtered.length} />

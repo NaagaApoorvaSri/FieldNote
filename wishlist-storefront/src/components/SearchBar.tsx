@@ -6,22 +6,22 @@ interface SearchBarProps {
 
 export function SearchBar({ value, onChange, resultCount }: SearchBarProps) {
   return (
-    <div className="w-full max-w-xl">
+    <div className="w-full max-w-md">
       <label htmlFor="product-search" className="sr-only">
         Search products
       </label>
-      <div className="relative">
-        <SearchIcon className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-light" />
+      <div className="relative group">
+        <SearchIcon className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-light group-focus-within:text-indigo transition-colors duration-300" />
         <input
           id="product-search"
           type="search"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="Search notebooks, bags, mugs…"
-          className="w-full rounded-2xl border border-line bg-paper/90 py-3 pl-11 pr-4 font-body text-sm text-ink shadow-sm placeholder:text-slate-light transition-all duration-200 focus:border-indigo focus:bg-white focus:shadow-[0_0_0_4px_rgba(53,80,122,0.12)] focus:outline-none"
+          placeholder="Search notebooks, pens, bags…"
+          className="w-full rounded-2xl border border-line bg-paper py-3.5 pl-12 pr-5 font-body text-sm text-ink shadow-[0_4px_16px_-4px_rgba(0,0,0,0.04)] placeholder:text-slate-light transition-all duration-300 focus:border-indigo focus:bg-white focus:shadow-[0_12px_32px_-8px_rgba(59,91,219,0.15)] focus:outline-none"
         />
       </div>
-      <p className="mt-2 font-mono text-xs uppercase tracking-[0.24em] text-slate" aria-live="polite">
+      <p className="mt-3 font-mono text-xs font-semibold uppercase tracking-widest text-slate-light" aria-live="polite">
         {resultCount} {resultCount === 1 ? "product" : "products"}
       </p>
     </div>
@@ -30,9 +30,9 @@ export function SearchBar({ value, onChange, resultCount }: SearchBarProps) {
 
 function SearchIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" className={className}>
-      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="1.8" />
-      <line x1="21" y1="21" x2="16.5" y2="16.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" className={className}>
+      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
+      <line x1="21" y1="21" x2="16" y2="16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }

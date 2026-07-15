@@ -9,10 +9,10 @@ interface ProductGridProps {
 export function ProductGrid({ products, query }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-[24px] border border-dashed border-line/80 bg-white/70 px-6 py-20 text-center shadow-sm">
-        <p className="font-display text-xl text-ink">No matches for "{query}"</p>
-        <p className="max-w-sm text-sm leading-6 text-slate">
-          Try a different word, or browse by category instead of searching.
+      <div className="flex flex-col items-center gap-4 rounded-[32px] border border-dashed border-line/50 bg-gradient-to-br from-paper-dim to-danger/5 px-8 py-20 text-center shadow-[0_8px_32px_-8px_rgba(0,0,0,0.04)]">
+        <p className="font-display text-2xl font-bold text-ink">No matches for "{query}"</p>
+        <p className="max-w-sm text-base leading-7 text-slate">
+          Try searching with different keywords, or browse by exploring other products.
         </p>
       </div>
     );
@@ -22,7 +22,7 @@ export function ProductGrid({ products, query }: ProductGridProps) {
     <div
       role="list"
       aria-label="Products"
-      className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
     >
       {products.map((product) => (
         <div role="listitem" key={product.id}>
