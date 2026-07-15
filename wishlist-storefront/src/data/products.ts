@@ -23,7 +23,7 @@ export const products: Product[] = [
     currency: "USD",
     description: "Machined brass pencil that ages with a natural patina. Refillable graphite core.",
     category: "Writing",
-    imageUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600&q=80",
     inStock: true,
   },
   {
@@ -43,7 +43,7 @@ export const products: Product[] = [
     currency: "USD",
     description: "Turned walnut barrel with a fine steel nib. Ships with a converter for bottled ink.",
     category: "Writing",
-    imageUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1606933248051-5ce98c01b35d?w=600&q=80",
     inStock: false,
   },
   {
