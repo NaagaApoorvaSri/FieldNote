@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fieldnote token system — ink-on-paper stationery palette */
+  --color-paper: #faf9f6;
+  --color-paper-dim: #f1efe9;
+  --color-ink: #1c1f26;
+  --color-ink-soft: #3a3f4b;
+  --color-slate: #5b6472;
+  --color-slate-light: #8b93a0;
+  --color-indigo: #35507a;
+  --color-indigo-dark: #253a5c;
+  --color-saffron: #e8a33d;
+  --color-saffron-dark: #c7861f;
+  --color-line: #e4e0d8;
+  --color-danger: #a3402f;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background-color: rgba(53, 80, 122, 0.2);
+    color: var(--color-ink);
+  }
+
+  /* Visible keyboard focus everywhere, not just default outline */
+  :focus-visible {
+    outline: 2px solid var(--color-indigo);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
